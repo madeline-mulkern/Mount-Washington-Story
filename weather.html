@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Title goes here</title>
+	<title>Weather History & Live Update</title>
 	<meta name="description" content="">
 
 	<!-- Enable responsive layouts; tell browsers not to shrink pages to fit small screens -->
@@ -19,33 +19,41 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
-<body class="weatherpage">
+<body class="weatherbody">
 <!-- Change this classname for each page/type! -->
 
 <!-- Page content typically goes inside the container -->
-<div class="container">
+<div class="container w-container">
 
 	<header class="weatherpage">
-		<!-- global nav bar -->
-		<nav class="weather-nav">
-			<ul>
-				<li><a href="index.html" class="home">Home</a></li>
-				<li><a href="mountains.html">The White Mountains</a></li>
-				<li><a href="seasonal.html">Seasonal Photos</a></li>
-				<li><a href="weather.html">Weather</a></li>
-			</ul>
-		</nav>
 	</header>
 
-	<h1>WEATHER</h1>
+	<nav class="weather-nav">
+		<ul>
+			<li><a href="index.html" class="home">Home</a></li>
+			<li><a href="mountains.html">The White Mountains</a></li>
+			<li><a href="seasonal.html">Seasonal Photos</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="attractions.html">Visit</a></li>
+		</ul>
+	</nav>
+
+
+
+	<h1 class="weather-headline">Weather</h1>
+
+	<!-- <div class="conditions">
+		<iframe id="forecast_embed" frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=44.2593&lon=-71.4602&name=Bretton Woods, Carroll, NH"></iframe>
+	</div> -->
 
 	<div class="conditions">
+		<iframe class="w-iframe" src="https://xmountwashington.appspot.com/csc.html?data=more"></iframe>
 	</div>
 
-	<div class="history">
+	<div class="weatherhistory">
 		<h2>The Summit and the Mt. Washington Observatory</h2>
 		<p>
-			The summit station of Mount Washington has an alpine climate or tundra climate (Köppen ET), although it receives an extremely high amount of precipitation, atypical for most regions with such cold weather. Lower elevations have a subarctic climate (Köppen Dfc)
+			The summit station of Mount Washington has an alpine climate or tundra climate, although it receives an extremely high amount of precipitation, atypical for most regions with such cold weather. Lower elevations have a subarctic climate.
 		</p>
 		<p>
 			The weather of Mount Washington is notoriously erratic. This is partly due to the convergence of several storm tracks, mainly from the Atlantic to the south, the Gulf region and the Pacific Northwest. The vertical rise of the Presidential Range, combined with its north-south orientation, makes it a significant barrier to westerly winds. Low-pressure areas are more favorable to develop along the coastline in the winter due to the relative temperature differences between the Northeastern United States and the Atlantic Ocean. With these factors combined, hurricane-force wind gusts are observed from the summit of the mountain on average of 110 days per year.
@@ -73,6 +81,9 @@
 		Due in part to its high prominence, to its situation at the confluence of two major storm tracks, and to the north–south orientation of the Presidential Range ridgeline which it crowns, Mount Washington receives very high levels of precipitation, averaging an equivalent of 96.9 in (2,460 mm) of rain per year, with a record high for a calendar year anywhere in the U.S. east of the Cascade mountains along the west coast of 130.14 in (3,305.6 mm) in 1969 and a low of 71.34 in (1,812.0 mm) in 1979. Monthly precipitation has ranged from 0.75 in (19.1 mm) in October 1947 to 28.70 in (729.0 mm) in October 2005. Large amounts of precipitation often fall in a short period of time: in October 1996, a record 11.07 in (281.2 mm) of precipitation fell during a single 24-hour period. A substantial amount of this falls as snow, with a seasonal average of around 280 inches (7.1 m) of snow; seasonal accumulation has ranged from 75.8 in (1.93 m) in 1947–48 to 566.4 in (14.39 m) in 1968–69. The record amount of snowfall in a 24-hour period, 49.3 in (125.2 cm), occurred in February 1969, which is also the snowiest month on record with 172.8 in (4.39 m).
 		</p>
 	</div>
+
+	<img class="tower-left" src="img/tower-left.jpg" alt="Photo of Observatory Tower in Extreme Weather">
+	<img class="tower-right" src="img/tower-right.jpg" alt="Photo of Observatory Tower in Extreme Weather">
 
 
 </div><!-- end container -->

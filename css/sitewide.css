@@ -36,16 +36,13 @@ body {
 	something wrong.
 */
 
-/* container */
-
-
 
 /* ------------------------------------------------------------ */
 /* media query containing styles for larger screens */
 @media (min-width: 720px) {
 
-	/* container on larger screens */
-.container {
+/*HOME PAGE CSS*/
+.h-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 0.3fr 1fr;
@@ -57,10 +54,14 @@ body {
 	max-width: 1200px;
 }
 
-.homepage {
+.homebody {
 	background-image: url("../img/background.jpg");
 	background-attachment: fixed;
 	background-size: cover;
+}
+
+.homepage {
+	grid-column: 1 / 3;
 }
 
 h1 {
@@ -68,15 +69,11 @@ h1 {
 	font-style: normal;
 	color: white;
 	font-size: 130px;
-	line-height: auto;
+	line-height: 1em;
 	padding-top: 10%;
 	padding-bottom: 5%;
 	padding-left: 10%;
 	padding-right: 10%;
-}
-
-.frontpage {
-	grid-column: 1 / 3;
 }
 
 .information {
@@ -97,7 +94,10 @@ strong {
 	font-size: 35px;
 }
 
-/* global navbar */
+/*global navbar*/
+.global-nav {
+	position: inherit;
+}
 .global-nav ul {
 	padding: 0;
 	display: flex;
@@ -128,20 +128,227 @@ strong {
 	transition: all 2s;
 }
 
-.weatherpage {
+/*WHITE MOUNTAINS PAGE CSS*/
+.m-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.mountainsbody {
+	background-image: url("../img/summit-view.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.valley-headline {
+	text-align: center;
+	font-style: normal;
+	color: white;
+	font-size: 90px;
+	line-height: 1em;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.mountainspage {
+	grid-column: 2 / 5;
+	grid-row: 1 / 2;
+	text-shadow: 5px 3px 12px rgba(0,0,0,0.5);
+}
+
+.one {
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+	background-color: #D7CCEC;
+	padding: 1em;
+}
+
+.illustration {
+	grid-column: 3 / 5;
+	grid-row: 2 / 3;
+	/*background-color: rgba(225, 225, 225, 0.3)*/
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.two {
+	grid-column: 3 / 5;
+	grid-row: 3 / 4;
+	background-color: #D7CCEC;
+	padding: 1em;
+}
+
+.illustration2 {
+	grid-column: 1 / 3;
+	grid-row: 3 / 4;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.three {
+	grid-column: 1 / 3;
+	grid-row: 4 / 5;
+	background-color: #D7CCEC;
+	padding: 1em;
+}
+
+.illustration3 {
+	grid-column: 3 / 5;
+	grid-row: 4 / 5;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.etymology {
+	grid-column: 3 / 5;
+	grid-row: 5 / 6;
+	background-color: #D7CCEC;
+	padding: 1em;
+}
+
+.illustration4 {
+	grid-column: 1 / 3;
+	grid-row: 5 / 6;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.geology {
+	grid-column: 1 / 3;
+	grid-row: 6 / 7;
+	background-color: #D7CCEC;
+	padding: 1em;
+}
+
+.illustration5 {
+	grid-column: 3 / 5;
+	grid-row: 6 / 7;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.mountains-nav {
+	position: inherit;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.mountains-nav ul {
+	padding: 0;
+	display: inline;
+	flex-direction: row;
+	grid-column: 1 / 2;
+}
+
+.mountains-nav li {
+	list-style-type: none;
+	flex: 3 1 300px;
+	text-align: center;
+}
+
+.mountains-nav a {
+	display: block;
+	background: #625875;
+	color: #fff;
+	text-decoration: none;
+	padding: 1em;
+	transition: all 1s;
+	font-size: 16px;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+.mountains-nav a:hover {
+	background: #4B4061;
+	transition: all 2s;
+}
+
+/*WEATHER PAGE CSS*/
+.w-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.1fr 0.2fr;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.weatherbody {
 	background-image: url("../img/blue-winter.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 0.5fr;
 }
 
-.history {
-	background: #
+.weather-headline {
+	text-shadow: 5px 3px 12px rgba(0,0,0,0.5);
+	text-align: left;
+	font-style: normal;
+	color: white;
+	font-size: 100px;
+	line-height: 1em;
+	padding-top: 10%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
-/*weather page navbar*/
+.conditions {
+	grid-column: 1 / 5;
+	grid-row: 2 / 3;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	border: 5px solid #D6EFFE;
+	background: rgba(255,255,255,0.3);
+}
+
+.w-iframe {
+	width: 100%;
+	height: 900px;
+}
+
+.weatherhistory {
+	background: #ffffff;
+	padding: 10%;
+	grid-column: 2 / 4;
+	grid-row: 3 / 4;
+	margin-top: 4em;
+}
+
+.tower-left {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+	margin-top: 4em;
+	padding-right: 2em;
+	padding-left: 2em;
+}
+
+.tower-right {
+	grid-column: 4 / 5;
+	grid-row: 3 / 4;
+	margin-top: 4em;
+	padding-right: 1em;
+	padding-left: 2em;
+}
+
+.weather-nav {
+	position: inherit;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
 .weather-nav ul {
 	padding: 0;
 	display: inline;
@@ -172,4 +379,279 @@ strong {
 	transition: all 2s;
 }
 
-} /* end media query */
+/*SEASONAL PHOTOS PAGE CSS*/
+.s-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.seasonalbody {
+	background-image: url("../img/cairns.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.seasonalpage {
+	grid-column: 2 / 5;
+	text-shadow: 5px 3px 12px rgba(0,0,0,0.5);
+}
+
+.gallery1 {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery2 {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery3 {
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery4 {
+	grid-column: 2 / 3;
+	grid-row: 5 / 6;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery5 {
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery6 {
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery7 {
+	grid-column: 3 / 4;
+	grid-row: 4 / 5;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery8 {
+	grid-column: 3 / 4;
+	grid-row: 5 / 6;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery9 {
+	grid-column: 4 / 5;
+	grid-row: 2 / 3;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery10 {
+	grid-column: 4 / 5;
+	grid-row: 3 / 4;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery11 {
+	grid-column: 4 / 5;
+	grid-row: 4 / 5;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.gallery12 {
+	grid-column: 4 / 5;
+	grid-row: 5 / 6;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 1em;
+}
+
+.seasonal-headline {
+	grid-column: 4 / 5;
+	grid-row: 1 / 2;
+	font-style: normal;
+	color: white;
+	font-size: 80px;
+	line-height: 1em;
+	padding-top: 10%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.seasonal-nav {
+	position: inherit;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.seasonal-nav ul {
+	padding: 0;
+	display: inline;
+	flex-direction: row;
+	grid-column: 1 / 2;
+}
+
+.seasonal-nav li {
+	list-style-type: none;
+	flex: 3 1 300px;
+	text-align: center;
+}
+
+.seasonal-nav a {
+	display: block;
+	background: #FAD2BC;
+	color: black;
+	text-decoration: none;
+	padding: 1em;
+	transition: all 1s;
+	font-size: 16px;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+.seasonal-nav a:hover {
+	background: #F7E6DD;
+	transition: all 2s;
+}
+
+/*ATTRACTIONS PAGE CSS*/
+.a-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 0.1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.attractionsbody {
+	background-image: url("../img/tracks.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.visit {
+	grid-column: 2 / 5;
+	grid-row: 1 / 2;
+	text-shadow: 5px 3px 12px rgba(0,0,0,0.5);
+	font-size: 80px;
+}
+
+.railway {
+	grid-column: 2 / 5;
+	grid-row: 2 / 3;
+	background-color: rgba(214, 239, 254, 0.8);
+	color: black;
+	padding: 2em;
+}
+
+.cog {
+	grid-column: 2 / 5;
+	grid-row: 3 / 4;
+}
+
+.purple {
+	grid-column: 2 / 5;
+	grid-row: 4 / 5;
+	padding-top: 1em;
+}
+
+.ravine {
+	grid-column: 2 / 5;
+	grid-row: 5 / 6;
+	background-color: rgba(214, 239, 254, 0.8);
+	color: black;
+	padding: 2em;
+	margin-top: 6em;
+}
+
+.hike-video {
+	grid-column: 2 / 3;
+	grid-row: 6 / 7;
+}
+
+.ski-video {
+	grid-column: 4 / 5;
+	grid-row: 6 / 7;
+}
+
+.tucks-skiers {
+	grid-column: 2 / 5;
+	grid-row: 7 / 8;
+	padding-top: 1em;
+}
+
+.attractions-nav {
+	position: inherit;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.attractions-nav ul {
+	padding: 0;
+	display: inline;
+	flex-direction: row;
+	grid-column: 1 / 3;
+}
+
+.attractions-nav li {
+	list-style-type: none;
+	flex: 3 1 300px;
+	text-align: center;
+}
+
+.attractions-nav a {
+	display: block;
+	background: white;
+	color: #426BA9;
+	text-decoration: none;
+	padding: 1em;
+	transition: all 1s;
+	font-size: 16px;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+.attractions-nav a:hover {
+	background: #f0f0f0;
+	transition: all 2s;
+}
+
+} /* end media query for larger screens */
